@@ -23,7 +23,8 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Server client files from React app
-app.use(express.static(path.join(__dirname, '..', 'client')));
+
+// app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.get('/api/items', itemController.getItems, (req, res) => {
   return res.status(200).send(res.locals.doc);
@@ -36,6 +37,10 @@ app.post('/api/items', itemController.createItem, (req, res) => {
 
 app.delete('/api/items', itemController.deleteItem, (req, res) => {
   return res.status(200).send(res.locals.doc);
+});
+
+app.use((req, res, next) => {
+  res.status(404).send('404 Not Found');
 });
 
 app.get('*', (req, res) => {
