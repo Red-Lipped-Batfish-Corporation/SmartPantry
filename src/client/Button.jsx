@@ -1,13 +1,16 @@
-import { Navigate, useState } from 'react-router-dom'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Button = () => {
-    const [goToPantry, setGoToPantry] = useState(false);
-    if (goToPantry) {
-        return <Navigate to="/ Pantry url here/" />
-    }
+    // const [goToPantry, setGoToPantry] = useState(false);
+    const navigate = useNavigate();
+    // if (goToPantry) {
+    //     return <Navigate to="/ Pantry url here/" />
+    // }
     return (
         <div>
-            <button onClick={()=> {setGoToPantry(true)}}> Pantry </button>
+
+            <button onClick={()=> {navigate("pantry.html")}}> Pantry </button>
         </div>
     )
 }

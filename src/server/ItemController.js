@@ -26,9 +26,8 @@ const itemController = {
     try {
       const docs = await item.create({
         name: req.body.name,
-        price: req.body.price, 
-        purchaseDate: req.body.purchaseDate,
-        expirationDate: req.body.expirationDate
+        price: req.body.price
+        
       });
       res.locals.doc = docs;
       return next();
