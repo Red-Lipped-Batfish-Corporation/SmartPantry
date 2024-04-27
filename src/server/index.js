@@ -30,6 +30,7 @@ app.get('/api/items', itemController.getItems, (req, res) => {
 });
 
 app.post('/api/items', itemController.createItem, (req, res) => {
+  console.log('res.locals')
   return res.status(200).send(res.locals.doc);
 });
 
