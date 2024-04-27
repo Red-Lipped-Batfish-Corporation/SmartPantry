@@ -3,7 +3,7 @@ const Table = () => {
     const [foodItem, setFoodItem] = useState([]);
 
     useEffect(() => {
-        fetch("/url here for curent inventory", {
+        fetch("http:localhost:3000/api/items", {
             method: 'GET'
         }).then(response => response.json())
             .then((food) => {
