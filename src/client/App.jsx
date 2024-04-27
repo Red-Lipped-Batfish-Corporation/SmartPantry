@@ -6,7 +6,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
       return (
         <Router>
               <div>
-          <Button />  
+                  <Button />  
+                  <Button2 />
         </div>  
         </Router>
       
