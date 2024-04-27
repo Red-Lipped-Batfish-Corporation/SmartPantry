@@ -26,7 +26,8 @@ const itemController = {
     try {
       const docs = await item.create({
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price,
+        purchaseDate: req.purchaseDate,
         
       });
       res.locals.doc = docs;
@@ -40,6 +41,7 @@ const itemController = {
     }
   },
 
+  // console.log('Testing')
   async deleteItem(req, res, next) {
     try {
       const docs = await item.findOneAndDelete({
