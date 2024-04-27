@@ -22,10 +22,13 @@ const itemController = {
   },
 
   async createItem(req, res, next) {
+    console.log('we reached create item')
     try {
       const docs = await item.create({
         name: req.body.name,
-        price: req.body.price
+        price: req.body.price, 
+        purchaseDate: req.body.purchaseDate,
+        expirationDate: req.body.expirationDate
       });
       res.locals.doc = docs;
       return next();
