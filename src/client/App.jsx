@@ -7,7 +7,8 @@ import { RecipeCard } from './RecipeCard';
       return (
         <Router>
               <div>
-          <Button />  
+                  <Button />  
+                  <Button2 />
         </div>  
         </Router>
 
