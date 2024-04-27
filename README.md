@@ -1,4 +1,4 @@
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+# Welcome to Red-Lipped Grocery
+**Red-Lipped Grocery** is designed to Difficult to keep track of food, expiration dates and recipes. 
+Reminder health app that keeps track of expiration dates and has a recipe book. Healthy food categorization. Food pyramid
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
