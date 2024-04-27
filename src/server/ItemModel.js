@@ -3,7 +3,7 @@ const { Schema } = mongoose;
 
 const ItemSchema = new Schema({
   name: { type: String, required: true },
-  price: { type: Number, required: true },
+  price: { type: Number, required: false },
   purchaseDate: { type: String, required: true },
   expirationDate: {type: String, required: true }
 });
