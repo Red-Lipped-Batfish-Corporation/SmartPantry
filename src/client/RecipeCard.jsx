@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 08:47:03 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-27 13:43:15
+ * @Last Modified time: 2024-04-27 14:34:33
  */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
@@ -13,30 +13,7 @@ import Button from 'react-bootstrap/Button';
 // import { useEffect } from 'react';
 
 
-
-
-
 export const RecipeCard = () => {
-
-
-
-
-    const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information';
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '52eb7a0445msh8633c554a4e63d1p1f4076jsn2326a63243dd',
-            'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-        }
-    };
-
-    try {
-        const response = fetch(url, options);
-        const result = response.text();
-        console.log(result);
-    } catch (error) {
-        console.error(error);
-    }
 
     return (
         <div>
