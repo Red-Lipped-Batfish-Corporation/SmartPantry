@@ -1,2 +1,11 @@
 import { useState } from "react";
-// const inputForm 
+import React from "react";
+
+const Input = () => {
+    const [product, setProduct] = useState('');
+    const [purchaseDate, setPurchaseDate] = useState('');
+    const [expirationDate, setExpirationDate] = useState('');
+    return (
+
+    )
+}
