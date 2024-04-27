@@ -1,7 +1,11 @@
 const recipeController = {
     async getRecipes (req, res, next) {
       try {
-        const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9`);
+        const {ingredients} = req.query
+        // console.log(ingredients)
+        console.log('i consoled')
+        console.log(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`)
+        const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`);
         if (!response.ok) {
           throw new Error('Failed to fetch data from API with status: ' + response.status);
         }
@@ -16,7 +20,7 @@ const recipeController = {
         }
   
         res.locals.doc = recipe;
-        console.log(recipe); 
+        // console.log(recipe.recipes[0].summary.extendedIngredients[0].summary); 
         return next();
       } catch (err) {
         return next({
