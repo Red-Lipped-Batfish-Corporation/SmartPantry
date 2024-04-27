@@ -5,11 +5,12 @@ import { RecipeCard } from './RecipeCard';
 
   const App = () => {
       return (
-        <Router>
-              <div>
-          <Button />  
-        </div>  
-        </Router>
+        // <Router>
+        //       <div>
+        //   <Button />  
+        // </div>  
+        // </Router>
+        <RecipeCard />
 
       
         

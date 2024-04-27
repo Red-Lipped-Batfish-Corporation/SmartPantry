@@ -1,10 +1,43 @@
+/*
+ * @Author: Peter Gao 
+ * @Date: 2024-04-27 08:47:03 
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-27 13:43:15
+ */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+
+
+// import { useEffect } from 'react';
+
+
 
 
 
 export const RecipeCard = () => {
+
+
+
+
+    const url = 'https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '52eb7a0445msh8633c554a4e63d1p1f4076jsn2326a63243dd',
+            'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
+        }
+    };
+
+    try {
+        const response = fetch(url, options);
+        const result = response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }
+
     return (
         <div>
             <Card style={{ width: '18rem' }}>
@@ -12,7 +45,7 @@ export const RecipeCard = () => {
                 <Card.Body>
                     <Card.Title>Sheet Pan Garlic Butter Steak Bites with Veggies</Card.Title>
                     <Card.Text>
-                    Reminder health app that keeps track of expiration dates and has a recipe book. Healthy food categorization.
+                        Reminder health app that keeps track of expiration dates and has a recipe book. Healthy food categorization.
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
@@ -24,6 +57,16 @@ export const RecipeCard = () => {
                     <ListGroup.Item>1/2 teaspoon black pepper, divided</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
+
+                    <Button variant="primary">Primary</Button>{' '}
+                    <Button variant="secondary">Secondary</Button>{' '}
+                    <Button variant="success">Success</Button>{' '}
+                    <Button variant="warning">Warning</Button>{' '}
+                    <Button variant="danger">Danger</Button>{' '}
+                    <Button variant="info">Info</Button>{' '}
+                    <Button variant="light">Light</Button>{' '}
+                    <Button variant="dark">Dark</Button>
+                    <Button variant="link">Link</Button>
                     <Card.Link href="#">Card Link</Card.Link>
                     <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
