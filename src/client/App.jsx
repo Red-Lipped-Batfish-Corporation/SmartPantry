@@ -6,9 +6,9 @@ import { RecipeCard } from './RecipeCard';
   const App = () => {
       return (
         <Router>
-              <div>
-          <Button />  
-        </div>  
+          <div>
+            <Button />  
+          </div>  
         </Router>
 
       
