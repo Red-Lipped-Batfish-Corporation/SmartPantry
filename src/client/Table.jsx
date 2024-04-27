@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 const Table = () => {
     const [foodItem, setFoodItem] = useState([]);
-
+    const [expirationDates, setExpirationDates] = useState([]);
     useEffect(() => {
         fetch("http:localhost:3000/api/items", {
             method: 'GET'
@@ -9,6 +9,9 @@ const Table = () => {
             .then((food) => {
                 console.log('here is food item', foodItem)
                 setFoodItem(food)
+                // should extract all the expiration dates into array of dates
+                const expDates = food.map(item => item.Exp);
+                setExpirationDates(expDates);
         }).catch(err => console.log(err))
     }, [])
     return (
@@ -21,7 +24,8 @@ const Table = () => {
                 </tr>
                 <tbody> 
                     {
-                        foodItem.map(val => {
+                        foodItem.map(val => {// iterate through array
+                            // sort it by date of expiration 
                             return <tr key={val._id}>
                                 <td> {val.product}</td>
                                 <td> {val.Exp}</td>
