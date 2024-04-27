@@ -40,6 +40,7 @@ const itemController = {
     }
   },
 
+  // console.log('Testing')
   async deleteItem(req, res, next) {
     try {
       const docs = await item.findOneAndDelete({
