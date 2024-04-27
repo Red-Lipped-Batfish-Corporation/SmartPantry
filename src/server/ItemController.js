@@ -26,6 +26,7 @@ const itemController = {
       const docs = await item.create({
         name: req.body.name,
         price: req.body.price
+        
       });
       res.locals.doc = docs;
       return next();
