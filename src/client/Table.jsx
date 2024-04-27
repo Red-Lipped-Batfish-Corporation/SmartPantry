@@ -21,7 +21,8 @@ const Table = () => {
                 </tr>
                 <tbody> 
                     {
-                        foodItem.map(val => {
+                        foodItem.map(val => {// iterate through array
+                            // sort it by date of expiration 
                             return <tr key={val._id}>
                                 <td> {val.product}</td>
                                 <td> {val.Exp}</td>

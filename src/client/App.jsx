@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from "./Button";
+import Input from "./Input"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { RecipeCard } from './RecipeCard';
 
@@ -8,7 +9,7 @@ import { RecipeCard } from './RecipeCard';
         <Router>
               <div>
                   <Button />  
-                  <Button2 />
+                  <Input />
         </div>  
         </Router>
 
