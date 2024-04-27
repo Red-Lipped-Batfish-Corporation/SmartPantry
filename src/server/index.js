@@ -14,6 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
 // Connect to database
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
@@ -29,6 +30,7 @@ app.get('/api/items', itemController.getItems, (req, res) => {
 });
 
 app.post('/api/items', itemController.createItem, (req, res) => {
+  console.log('res.locals')
   return res.status(200).send(res.locals.doc);
 });
 
