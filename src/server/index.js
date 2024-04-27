@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const itemController = require('./ItemController');
+const recipeController = require('./RecipeController');
 
 const PORT = 3000;
 
@@ -27,6 +28,10 @@ mongoose.connect(process.env.MONGO_URI, {
 // app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.get('/api/items', itemController.getItems, (req, res) => {
+  return res.status(200).send(res.locals.doc);
+});
+
+app.get('/api/recipes', recipeController.getRecipes, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
