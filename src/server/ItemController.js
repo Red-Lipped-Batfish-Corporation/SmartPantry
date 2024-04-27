@@ -22,6 +22,7 @@ const itemController = {
   },
 
   async createItem(req, res, next) {
+    console.log('we reached create item')
     try {
       const docs = await item.create({
         name: req.body.name,
@@ -39,6 +40,7 @@ const itemController = {
     }
   },
 
+  // console.log('Testing')
   async deleteItem(req, res, next) {
     try {
       const docs = await item.findOneAndDelete({
