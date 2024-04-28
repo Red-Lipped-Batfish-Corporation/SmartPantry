@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 08:47:03 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-27 14:34:33
+ * @Last Modified time: 2024-04-27 17:01:24
  */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
@@ -10,10 +10,8 @@ import { ListGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 
 
-// import { useEffect } from 'react';
 
-
-export const RecipeCard = () => {
+const RecipeCard = (props) => {
 
     return (
         <div>
@@ -26,7 +24,10 @@ export const RecipeCard = () => {
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>1 pound tiny new red and/or yellow potatoes, halved</ListGroup.Item>
+                    <ListGroup.Item>{props.item1}</ListGroup.Item>
+                    <ListGroup.Item>{props.item2}</ListGroup.Item>
+                    <ListGroup.Item>{props.item3}</ListGroup.Item>
+                    <ListGroup.Item>{props.item4}</ListGroup.Item>
                     <ListGroup.Item>12 ounces green beans, trimmed</ListGroup.Item>
                     <ListGroup.Item>1 small red onion, cut into 1-inch wedgess</ListGroup.Item>
                     <ListGroup.Item>2 tablespoons olive oil, divided</ListGroup.Item>
@@ -34,16 +35,6 @@ export const RecipeCard = () => {
                     <ListGroup.Item>1/2 teaspoon black pepper, divided</ListGroup.Item>
                 </ListGroup>
                 <Card.Body>
-
-                    <Button variant="primary">Primary</Button>{' '}
-                    <Button variant="secondary">Secondary</Button>{' '}
-                    <Button variant="success">Success</Button>{' '}
-                    <Button variant="warning">Warning</Button>{' '}
-                    <Button variant="danger">Danger</Button>{' '}
-                    <Button variant="info">Info</Button>{' '}
-                    <Button variant="light">Light</Button>{' '}
-                    <Button variant="dark">Dark</Button>
-                    <Button variant="link">Link</Button>
                     <Card.Link href="#">Card Link</Card.Link>
                     <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
@@ -51,3 +42,6 @@ export const RecipeCard = () => {
         </div>
     )
 }
+
+
+export default RecipeCard;
