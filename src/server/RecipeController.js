@@ -2,7 +2,6 @@ const recipeController = {
     async getRecipes (req, res, next) {
       try {
         const {ingredients} = req.query
-        // console.log(ingredients)
         console.log('i consoled')
         console.log(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`)
         const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`);
@@ -18,9 +17,16 @@ const recipeController = {
             message: { error: 'Could not find items in DB!'},
           });
         }
-  
-        res.locals.doc = recipe;
-        // console.log(recipe.recipes[0].summary.extendedIngredients[0].summary); 
+        
+        // contains a sanitized object
+        res.locals.doc = recipe.recipes[0];
+    
+        // ***PATHS TO SEARCH RECIPE OBJECT***
+        // Summary of Recipe: .summary
+        // Instructions: .instructions
+        // Recipe Card: .analyzedInstructions
+
+        // console.log(res.locals.doc.summary); 
         return next();
       } catch (err) {
         return next({
