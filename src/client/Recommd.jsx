@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Card } from 'react-bootstrap';
 
 function Recommd() {
 
@@ -16,20 +17,31 @@ function Recommd() {
 
     }
 
-
-
   return (
     <div>
         {recommd.map((recipe) => {
+
             return (
-                <div key = {recipe.id}>
+                <Card>
                     <p>{recipe.title}</p>
-                </div>
+                    <img src={recipe.image} alt={recipe.title} />
+                </Card>
             )
         })}
 
     </div>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
 
 export default Recommd
