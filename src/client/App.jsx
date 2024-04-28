@@ -6,6 +6,7 @@ import { RecipeCard } from './components/RecipeCard';
 import Recommd from './components/Recommd';
 import PantryPage from './pages/PantryPage';
 import RecipesPage from './pages/RecipesPage';
+import './red-lip.css';
 
   const App = () => {
       return (
