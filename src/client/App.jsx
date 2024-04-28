@@ -1,23 +1,31 @@
 import React from 'react';
-import Input from "./Input"
-import Button from './Button';
-import Button2 from './Button2'
+import Button from './components/Button';
+import Button2 from './components/Button2'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { RecipeCard } from './RecipeCard';
-import Table from './Table';
+import { RecipeCard } from './components/RecipeCard';
+import Recommd from './components/Recommd';
+import PantryPage from './pages/PantryPage';
+import RecipesPage from './pages/RecipesPage';
+import './red-lip.css';
 
   const App = () => {
       return (
-        <Router>
-              <div className = "centered">
-                  <Button />  
-                  <Input />
-        </div>  
-        </Router>
+        <div>
+           <Router>
+              <Button to="pantry"/>
+              <Button2 to="recipes"/>
+              <Routes>
+              <Route path='/pantry' 
+                element = {<PantryPage/>} />
+              <Route path ='/recipes'
+                element = {<RecipesPage/>}/>
+              </Routes>
+            </Router>
+            <Recommd/>
+        </div>      
 
-      
-        
     )
-  }
+}
 
 export default App;
+
