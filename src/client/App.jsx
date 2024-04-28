@@ -9,7 +9,7 @@ import Table from './Table';
   const App = () => {
       return (
         <Router>
-              <div>
+              <div className = "centered">
                   <Button />  
                   <Input />
         </div>  
