@@ -8,7 +8,7 @@ import { RecipeCard } from './RecipeCard';
   const App = () => {
       return (
         <Router>
-              <div>
+              <div className = "centered">
                   <Button />  
                   <Input />
         </div>  

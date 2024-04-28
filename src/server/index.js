@@ -31,6 +31,7 @@ app.get('/api/items', itemController.getItems, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
+//when we have a question mark it means req.query and the colon means we have a value and the ingredients will be replaced by the value on req.body.ingredients
 app.get('/api/recipes?:ingredients', recipeController.getRecipes, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
