@@ -32,7 +32,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "scripts": {
-    "start": "node src/server/index.js",
+    "start": "nodemon src/server/index.js",
     "dev": "concurrently \"webpack serve --mode development --open\" \"nodemon src/server/index.js\"",
     "build": "webpack --mode production",
     "compile-scss": "node-sass src/styles/custom.scss -o src/styles"

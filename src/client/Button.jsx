@@ -16,7 +16,7 @@ const Button = () => {
     return (
         <div>
 
-            <button onClick={()=> {navigate("pantry.html")}}> Pantry </button>
+            <button onClick={()=> {navigate("/index.html")}}> Pantry </button>
         </div>
     )
 }
