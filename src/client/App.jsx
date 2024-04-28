@@ -6,20 +6,22 @@ import { RecipeCard } from './components/RecipeCard';
 import Recommd from './components/Recommd';
 import PantryPage from './pages/PantryPage';
 import RecipesPage from './pages/RecipesPage';
+import WelcomePage from './pages/WelcomePage';
 import './red-lip.css';
 
   const App = () => {
       return (
         <div>
            <Router>
-              <Button to="pantry"/>
-              <Button2 to="recipes"/>
               <Routes>
+              <Route path="/" element={<WelcomePage />} />
               <Route path='/pantry' 
                 element = {<PantryPage/>} />
               <Route path ='/recipes'
                 element = {<RecipesPage/>}/>
               </Routes>
+              <Button to="pantry"/>
+              <Button2 to="recipes"/>
             </Router>
             <Recommd/>
         </div>      
