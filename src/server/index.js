@@ -23,11 +23,14 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log('MongoDB connected successfully.'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Server client files from React app
 
 // app.use(express.static(path.join(__dirname, '..', 'client')));
 
-app.get('/api/items', itemController.getItems, (req, res) => {
+app.get('/api/recipes', recipeController.getRecipes, (req, res) => {
+  return res.status(200).send(res.locals.doc);
+});
+
+app.get('/api/items?:ingredients', itemController.getItems, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
@@ -36,7 +39,6 @@ app.get('/api/recipes?:ingredients', recipeController.getRecipes, (req, res) => 
 });
 
 app.post('/api/items', itemController.createItem, (req, res) => {
-  console.log('res.locals')
   return res.status(200).send(res.locals.doc);
 });
 
@@ -44,12 +46,20 @@ app.delete('/api/items', itemController.deleteItem, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
-app.use((req, res, next) => {
-  res.status(404).send('404 Not Found');
+app.get('*', (req, res) => {
+  res.status(404).send('404 URL NOT FOUND');
 });
 
-app.get('*', (req, res) => {
-  res.status(404).send('URL is wrong');
+//gives default errors unless middleware has own error that gets replaced. So if error comes from middleware, it gets replaced with defualt error with middleware
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign({}, defaultErr, err);
+  console.log(errorObj.log);
+  return res.status(errorObj.status).json(errorObj.message);
 });
 
 //gives default errors unless middleware has own error that gets replaced. So if error comes from middleware, it gets replaced with defualt error with middleware
