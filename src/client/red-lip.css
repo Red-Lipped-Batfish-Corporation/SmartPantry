@@ -25,7 +25,14 @@ button {
 }
 
 body {
-
     margin: 0% 20%
+}
     
+h1 {
+    text-align: center;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
 }

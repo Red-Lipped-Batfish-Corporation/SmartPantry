@@ -24,7 +24,7 @@ import RecipesPage from './pages/RecipesPage';
         </div>      
 
     )
-  }
+}
 
 export default App;
 
