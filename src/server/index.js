@@ -30,7 +30,7 @@ app.get('/api/recipes', recipeController.getRecipes, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
-app.get('/api/items', itemController.getItems, (req, res) => {
+app.get('/api/items?:ingredients', itemController.getItems, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 

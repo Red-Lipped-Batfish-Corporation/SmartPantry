@@ -2,7 +2,6 @@ const recipeController = {
     async getRecipes (req, res, next) {
       try {
         const {ingredients} = req.query
-        // console.log(ingredients)
         console.log('i consoled')
         console.log(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`)
         const response = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&include-tags=${ingredients}`);
