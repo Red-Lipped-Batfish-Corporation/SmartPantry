@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 15:38:27 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-27 17:00:38
+ * @Last Modified time: 2024-04-27 22:41:14
  */
 
 import React, { useState } from 'react';
@@ -31,18 +31,23 @@ function DropdownExample() {
         setSelectedItems(selectedItems.filter(selectedItem => selectedItem !== item));
     };
 
+    // Request the recipe
+    const handleRequest = (arr) => {
+
+    }
+
     return (
         <div>
             {/* Dropdown list */}
-            <Dropdown onSelect={handleSelect} style={{ backgroundColor: '#FFCB77' }}>
+            <Dropdown onSelect={handleSelect} style={{ backgroundColor: 'white' }}>
                 <Dropdown.Toggle variant="primary" id="dropdown-basic" style={{ backgroundColor: '#17C3B2' }}>
-                    Options:
+                    Choose the ingredient from your grocery list:
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                    <Dropdown.Item eventKey="item1">Item 1</Dropdown.Item>
-                    <Dropdown.Item eventKey="item2">Item 2</Dropdown.Item>
-                    <Dropdown.Item eventKey="item3">Item 3</Dropdown.Item>
+                    <Dropdown.Item eventKey="Tomato">Tomato</Dropdown.Item>
+                    <Dropdown.Item eventKey="Eggs">Eggs</Dropdown.Item>
+                    <Dropdown.Item eventKey="Chicken">Chicken</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
@@ -60,6 +65,11 @@ function DropdownExample() {
                 ))}
                 {/* If no chose, show some hint */}
                 {selectedItems.length === 0 && <p>Please choose your item above.</p>}
+
+                {/* If user selected the ingredients, they should click "Give me the recipe" Button */}
+                <Button variant="primary" onClick={handleRequest} style={{ backgroundColor: '#FE6D73', width: '200px', margin: '5px' }}>Let's find the recipes!!! </Button>{' '}
+
+
             </div>
         </div >
     );

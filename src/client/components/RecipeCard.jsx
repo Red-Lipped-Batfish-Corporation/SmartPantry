@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 08:47:03 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-27 17:01:24
+ * @Last Modified time: 2024-04-27 22:43:11
  */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
@@ -15,7 +15,7 @@ const RecipeCard = (props) => {
 
     return (
         <div>
-            <Card style={{ width: '18rem' }}>
+            <Card style={{ width: '18rem', backgroundColor: '#FEF9EF' }}>
                 <Card.Img variant="top" src="https://duet-cdn.vox-cdn.com/thumbor/0x0:1280x938/1200x800/filters:focal(640x469:641x470):format(webp)/cdn.vox-cdn.com/uploads/chorus_asset/file/15835620/red-lipped-batfish.0.0.1465399406.jpg" />
                 <Card.Body>
                     <Card.Title>Sheet Pan Garlic Butter Steak Bites with Veggies</Card.Title>
@@ -36,7 +36,6 @@ const RecipeCard = (props) => {
                 </ListGroup>
                 <Card.Body>
                     <Card.Link href="#">Card Link</Card.Link>
-                    <Card.Link href="#">Another Link</Card.Link>
                 </Card.Body>
             </Card>
         </div>
