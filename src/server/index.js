@@ -34,7 +34,7 @@ app.get('/api/items?:ingredients', itemController.getItems, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
-app.get('/api/recipes', recipeController.getRecipes, (req, res) => {
+app.get('/api/recipes?:ingredients', recipeController.getRecipes, (req, res) => {
   return res.status(200).send(res.locals.doc);
 });
 
@@ -62,6 +62,20 @@ app.use((err, req, res, next) => {
   return res.status(errorObj.status).json(errorObj.message);
 });
 
+//gives default errors unless middleware has own error that gets replaced. So if error comes from middleware, it gets replaced with defualt error with middleware
+
+app.use((err, req, res, next) => {
+  const defaultErr = {
+    log: 'Express error handler caught unknown middleware error',
+    status: 500,
+    message: { err: 'An error occurred' },
+  };
+  const errorObj = Object.assign({}, defaultErr, err);
+  console.log(errorObj.log);
+  return res.status(errorObj.status).json(errorObj.message);
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
