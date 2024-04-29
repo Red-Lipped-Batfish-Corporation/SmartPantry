@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from 'react';
 const Table = () => {
     const [foodItem, setFoodItem] = useState([]);
     const [expirationDates, setExpirationDates] = useState([]);
@@ -26,9 +27,9 @@ const Table = () => {
                         foodItem.map(val => {// iterate through array
                             // sort it by date of expiration 
                             return <tr key={val._id}>
-                                <td> {val.product}</td>
-                                <td> {val.Exp}</td>
-                                <td> { val.Purchase}</td>
+                                <td> {val.name}</td>
+                                <td> {val.expirationDate}</td>
+                                <td> { val.purchaseDate}</td>
                             </tr>
                         })
                     }
