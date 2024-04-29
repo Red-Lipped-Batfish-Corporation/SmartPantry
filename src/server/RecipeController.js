@@ -67,9 +67,12 @@ const recipeController = {
           message: { error: 'No recipes found' },
         });
       }
-      
-      res.locals.doc = data.recipes[0]; 
-      console.log(res.locals.doc)
+      //
+    //   res.locals.doc = [data.recipes[0].title, data.recipes[0].image, data.recipes[0].missedIngredientCount, data.recipes[0].instructions, data.recipes[0].analyzedInstructions]; 
+    //   console.log(res.locals.doc);
+
+    res.locals.image = data.recipes[0].image;
+    console.log('res.locals.doc.image ',res.locals.image)
       return next();
     } catch (err) {
       return next({
@@ -87,6 +90,6 @@ module.exports = recipeController;
 /*
  * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
  * @Date: 2024-04-27 5:40 pm
- * @Last Modified by: christie.laferriere@gmail.com 
- * @Last Modified time: 2024-04-29 1:30 AM 
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 13:16:07
  */

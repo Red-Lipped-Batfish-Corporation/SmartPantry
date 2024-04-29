@@ -2,7 +2,7 @@
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 10:15:02
+ * @Last Modified time: 2024-04-29 10:58:22
  */
 
 // import React, { useState } from 'react';
@@ -116,7 +116,7 @@ function DropdownExample() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            // console.log('Data received:', data);
+            console.log('Data received:', data);
             // console.log('Data received img:', data.image);
             setRecipes(data || []);
 
