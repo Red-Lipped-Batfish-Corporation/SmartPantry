@@ -1,8 +1,8 @@
 /*
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
- * @Last Modified by: Peter Gao
- * @Last Modified time: 2024-04-29 14:55:25
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 16:13:59
  */
 
 import React, { useState } from 'react';
@@ -53,6 +53,7 @@ function DropdownList() {
 
     return (
         <Container style={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Container> </Container>
             <div>
                 <Dropdown onSelect={handleSelect}>
                     <Dropdown.Toggle variant="primary" id="dropdown-basic" style={{ backgroundColor: '#17C3B2' }}>
