@@ -2,17 +2,23 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 15:38:27 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 18:43:44
+ * @Last Modified time: 2024-04-28 22:48:50
  */
 
 import React, { useState } from 'react';
 import { Dropdown, Button, Card } from 'react-bootstrap';
 import { AiOutlineClose } from "react-icons/ai";
+import RecipeCard from './RecipeCard';
+import RecipesData from '../statics/data';
 
 
 function DropdownList() {
+
     // track the state of the selection
     const [selectedItems, setSelectedItems] = useState([]);
+    // track the recipes
+    const [recipes, setRecipes] = useState([]);
+
 
     // handle select
     const handleSelect = (eventKey) => {
@@ -32,8 +38,23 @@ function DropdownList() {
     };
 
     // Request the recipe
-    const handleRequest = (arr) => {
+    const handleRequest = () => {
+        try {
+            // based on this example:https://api.spoonacular.com/recipes/findByIngredients?ingredients=apples,+flour,+sugar&number=2 use join method to combine the ingredients.
+            // const response = fetch(`/api/recipes?ingredients=${selectedItems.join(',')}`);
+            // if (!response.ok) {
+            //     throw new Error('Failed to fetch data from API with status: ' + response.status);
+            // }
+            // const data = response.json();
+            // setRecipes(data.recipes);
 
+            const selectedRecipeData = RecipesData.find(recipe => recipe.missedIngredients[2].originalName === selectedItems[0]);
+            console.log('Statics data is: ', selectedRecipeData)
+
+            setRecipes(selectedRecipeData);
+        } catch (error) {
+            console.error('Error fetching recipe data:', error);
+        }
     }
 
     return (
@@ -46,7 +67,7 @@ function DropdownList() {
 
                 <Dropdown.Menu>
                     <Dropdown.Item eventKey="Tomato">Tomato</Dropdown.Item>
-                    <Dropdown.Item eventKey="Eggs">Eggs</Dropdown.Item>
+                    <Dropdown.Item eventKey="egg">Eggs</Dropdown.Item>
                     <Dropdown.Item eventKey="Chicken">Chicken</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
@@ -58,7 +79,6 @@ function DropdownList() {
                     <Card key={item} style={{ backgroundColor: '#FEF9EF', width: '200px', margin: '5px', display: 'flex', justifyContent: 'space-between' }}>
                         <Card.Body>
                             <Card.Text>{item}</Card.Text>
-                            {/* <Button variant="danger" onClick={() => handleCancel(item)}>取消选择</Button> */}
                             <AiOutlineClose style={{ color: 'red', cursor: 'pointer', marginRight: '10px' }} onClick={() => handleCancel(item)} />
                         </Card.Body>
                     </Card>
@@ -68,6 +88,9 @@ function DropdownList() {
 
                 {/* If user selected the ingredients, they should click "Give me the recipe" Button */}
                 <Button variant="primary" onClick={handleRequest} style={{ backgroundColor: '#FE6D73', width: '200px', margin: '5px' }}>Let's find the recipes!!! </Button>{' '}
+                <div>
+                    <RecipeCard recipes={recipes} />
+                </div>
 
 
             </div>

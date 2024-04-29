@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 17:57:26
+ * @Last Modified time: 2024-04-28 21:23:25
  */
 
 
@@ -11,7 +11,7 @@ import RecipeCard from '../components/RecipeCard';
 
 import React from 'react'
 
- const RecipeMainContainer = (props) => {
+const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
             <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>
@@ -20,7 +20,6 @@ import React from 'react'
             <div style={{ backgroundColor: '#FEF9EF' }}>khaki</div>
             <div style={{ backgroundColor: '#FE6D73' }}>red</div>
             <DropdownList {...props} />
-            <RecipeCard {...props} />
         </div>
     )
 }
