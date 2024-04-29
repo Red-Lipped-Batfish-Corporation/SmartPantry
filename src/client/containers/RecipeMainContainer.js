@@ -8,6 +8,7 @@
 
 import DropdownList from '../components/DropdownList';
 import RecipeCard from '../components/RecipeCard';
+import { Link } from 'react-router-dom';
 
 import React from 'react'
 
@@ -21,6 +22,14 @@ import React from 'react'
             <div style={{ backgroundColor: '#FE6D73' }}>red</div>
             <DropdownList {...props} />
             <RecipeCard {...props} />
+            <div className="navigation-buttons">
+        <Link to="/">
+          <button type="button">Take me to the Welcome Page</button>
+        </Link>
+        <Link to="/pantry">
+          <button type="button">Take me to the Recipes Page</button>
+        </Link>
+      </div>
         </div>
     )
 }

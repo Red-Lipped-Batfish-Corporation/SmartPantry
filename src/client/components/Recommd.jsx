@@ -104,4 +104,11 @@ const Gradient = styled.div`
     background: liner-gradient(rgba(0,0,0,0) rgba(0,0,0,0.5));
 `
 
-export default Recommd
+export default Recommd;
+
+/*
+ * @Author: Jing
+ * @Date: 2024-04-28 2:00 pm
+ * @Last Modified by: xiajing1103@gmail.com
+ * @Last Modified time: 2024-04-29 2: 00 PM
+ */
