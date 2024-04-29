@@ -1,5 +1,6 @@
 import Input from "../components/Input";
-import React from 'react'
+import React from 'react';
+import Table from "../components/Table"
 import { Link } from 'react-router-dom';
 import '../red-lip.css';
 
@@ -19,6 +20,10 @@ function PantryPage() {
                     <button type="button">Take me to Pantry Page</button>
                 </Link>
             </div>
+            <div>   
+                <hr/>
+                <Table/>
+            </div>
         </div>
     )
 }
@@ -28,6 +33,6 @@ export default PantryPage;
 /*
  * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
  * @Date: 2024-04-28 5:40 pm
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 08:38:14
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 19:25:27
  */

@@ -75,7 +75,7 @@ const recipeController = {
             for (const steps of arrayOfSteps) {
                 results.push('Step ' + steps.number + ': ' + steps.step);
             }
-            console.log(results);
+            // console.log(results);
             res.locals.doc = {
                 image: data.recipes[0].image,
                 title: data.recipes[0].title,
@@ -102,5 +102,5 @@ module.exports = recipeController;
  * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
  * @Date: 2024-04-27 5:40 pm
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-29 14:53:10
+ * @Last Modified time: 2024-04-29 18:49:20
  */
