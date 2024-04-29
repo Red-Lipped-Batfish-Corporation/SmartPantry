@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .catch(err => console.error('MongoDB connection error:', err));
 
 
-// app.use(express.static(path.join(__dirname, '..', 'client')));
+app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.get('/api/recipes', recipeController.getRecipes, (req, res) => {
   return res.status(200).send(res.locals.doc);
