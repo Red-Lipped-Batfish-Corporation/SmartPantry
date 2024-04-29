@@ -6,8 +6,8 @@ import '../red-lip.css';
 function PantryPage() {
     return (
 
-        <div className="pantry">
-            <h1>This is the Pantry page</h1>
+    <div className="pantry">
+      <h1>Hello, Your Pantry List is here</h1>
 
             {/* Navigation buttons */}
             <Input />

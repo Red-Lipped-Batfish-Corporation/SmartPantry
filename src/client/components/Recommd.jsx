@@ -20,11 +20,10 @@ function Recommd() {
         if (check) {
             setRecommd (JSON.parse(check)); //get the data from localstorage and parsing it back from string to the array 
         } else {
-            //const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&number=10`);
-            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=ec42407bffbe4527b7b7bc236c38728a&number=10`);
+            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&number=10`);
             const data = await api.json();
             localStorage.setItem('recommd', JSON.stringify(data.recipes));
-            //console.log(data);
+            console.log(data);
             setRecommd(data.recipes);
         }
     }
@@ -32,7 +31,7 @@ function Recommd() {
   return (
     <div>
         <Wrapper>
-            <h3>Popular Recipes</h3>
+            <h4>Popular Recipes</h4>
             <Splide 
             options = {{
                 perPage: 4,

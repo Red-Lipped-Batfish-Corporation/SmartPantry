@@ -55,17 +55,21 @@ button {
 
 
 body {
-    margin: 0% 20%
-}
-    
-/* h1 {
-    text-align: center;
+    margin: 0% 20%;
+    background-color: #FEF9EF ;
 }
 
-.centered {
-    display: flex;
-    align-items: center;
-} */
+h3{
+    border-radius: 20rem;
+    padding: 6px 12px;;
+    background-color: #FFCB77;
+    margin-top: 2rem;
+}
+    
+h1 {
+    margin-top:2rem ;
+}
+
 
 /*
  * @Author: Peter Gao  & Christie laferriere
