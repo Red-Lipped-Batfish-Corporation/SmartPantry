@@ -2,22 +2,39 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 08:47:03 
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-29 12:53:26
+ * @Last Modified time: 2024-04-29 14:13:52
  */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { ListGroup } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
+import { useEffect } from 'react';
 
 
 
 const RecipeCard = (props) => {
-    const recipe = props.recipes;
+    let imgUrl;
+    // console.log('Recipes type are: ', typeof (recipes))
+    console.log('Recipes are: ', props)
+    // console.log('recipes.recipes type  are: ', typeof (recipes.recipes))
+    // console.log('The raw data is: ', recipes.image)
 
-    // const imgUrl = recipe.image;
-    // console.log(imgUrl)
-    // const count = recipe.missedIngredientCount;
-    // const title = recipe.title;
+    // const count = props.missedIngredientCount;
+    // const title = props.title;
+    // const instruction = props.analyzedInstructions;
+    // useEffect(() => {
+    //     imgUrl = props.image;
+    //     console.log('Img url: ', imgUrl)
+    //     console.log('Props title: ', props.title);
+
+    // }, [props.image])
+    // console.log(recipes[1]);
+    // console.log('Recipe data:', recipe)
+    // console.log(recipe.extendedIngredients.image)
+    // console.log(props.recipes.aggregateLikes)
+
+
+
 
 
     return (
@@ -32,10 +49,10 @@ const RecipeCard = (props) => {
                     </Card.Text>
                 </Card.Body>
                 <ListGroup className="list-group-flush">
-                    <ListGroup.Item>{props.item1}</ListGroup.Item>
+                    {/* <ListGroup.Item>{props.item1}</ListGroup.Item>
                     <ListGroup.Item>{props.item2}</ListGroup.Item>
                     <ListGroup.Item>{props.item3}</ListGroup.Item>
-                    <ListGroup.Item>{props.item4}</ListGroup.Item>
+                    <ListGroup.Item>{props.item4}</ListGroup.Item> */}
 
                 </ListGroup>
                 <Card.Body>

@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 21:23:25
+ * @Last Modified time: 2024-04-29 12:59:19
  */
 
 
@@ -15,21 +15,15 @@ import React from 'react'
 const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
-            <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>
-            <div style={{ backgroundColor: '#17C3B2' }}>green</div>
-            <div style={{ backgroundColor: '#227C9D' }}>blue</div>
-            <div style={{ backgroundColor: '#FEF9EF' }}>khaki</div>
-            <div style={{ backgroundColor: '#FE6D73' }}>red</div>
             <DropdownList {...props} />
-            <RecipeCard {...props} />
             <div className="navigation-buttons">
-        <Link to="/">
-          <button type="button">Take me to the Welcome Page</button>
-        </Link>
-        <Link to="/pantry">
-          <button type="button">Take me to the Recipes Page</button>
-        </Link>
-      </div>
+                <Link to="/">
+                    <button type="button">Take me to the Welcome Page</button>
+                </Link>
+                <Link to="/pantry">
+                    <button type="button">Take me to the Recipes Page</button>
+                </Link>
+            </div>
         </div>
     )
 }
