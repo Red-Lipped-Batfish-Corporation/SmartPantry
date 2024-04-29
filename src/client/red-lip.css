@@ -45,9 +45,9 @@ button {
     align-items: center;
     justify-content: center; */
     display: flex;
-    justify-content: center; /* This centers the buttons horizontally in the flex container */
-    align-items: center; /* This aligns the buttons vertically center in the flex container */
-    gap: 10px; /* This adds space between the buttons */
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
     background-color: whitesmoke;
     padding: 10px;
     border-radius: 10px;
@@ -66,3 +66,17 @@ body {
     display: flex;
     align-items: center;
 } */
+
+/*
+ * @Author: Peter Gao  & Christie laferriere
+ * @Date: 2024-04-27 15:38:27 
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-28 07:56:42
+ */
+
+ /*
+*  @Reviewer and modifier : Christie Laferriere
+* @Last Modified by: christie.laferriere@gmail.com
+* @Last Modified time: 2024-04-29 1:30 AM 
+* this version allows the front end to make requests to the server which makes requests to the API then the spoonacular database
+*/
