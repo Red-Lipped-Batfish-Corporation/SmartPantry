@@ -55,6 +55,35 @@ const itemController = {
       });
     }
   },
+  async getItemsExpiringSoon (req, res, next)  {
+    const now = new Date();
+    const daysInAdvance = 3;
+    const expiringSoonDate = new Date(now.getTime() + (daysInAdvance * 24 * 60 * 60 * 1000));
+    
+    try {
+      const docs = await item.find({
+        expirationDate: {
+          $lte: expiringSoonDate
+        }
+      });
+      res.locals.doc = docs;
+      return next();
+    } catch (err) {
+      return next({
+        log: 'Error in itemController.getItemsExpiringSoon: ' + err,
+        status: 500,
+        message: { error: 'An error occurred while fetching items expiring soon.' }
+      });
+    }
+  },
 };
 
 module.exports = itemController;
+
+
+/*
+ * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
+ * @Date: 2024-04-27 5:40 pm
+ * @Last Modified by:Abel xabelpenguin@gmail.com
+ * @Last Modified time: 2024-04-27 10:30 PM 
+ */

@@ -2,16 +2,17 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 08:09:50
+ * @Last Modified time: 2024-04-28 21:23:25
  */
 
 
 import DropdownList from '../components/DropdownList';
 import RecipeCard from '../components/RecipeCard';
+import { Link } from 'react-router-dom';
 
 import React from 'react'
 
-export const RecipeMainContainer = (props) => {
+const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
             <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>
@@ -21,7 +22,16 @@ export const RecipeMainContainer = (props) => {
             <div style={{ backgroundColor: '#FE6D73' }}>red</div>
             <DropdownList {...props} />
             <RecipeCard {...props} />
+            <div className="navigation-buttons">
+        <Link to="/">
+          <button type="button">Take me to the Welcome Page</button>
+        </Link>
+        <Link to="/pantry">
+          <button type="button">Take me to the Recipes Page</button>
+        </Link>
+      </div>
         </div>
     )
 }
 
+export default RecipeMainContainer
