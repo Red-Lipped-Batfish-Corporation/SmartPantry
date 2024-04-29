@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 17:57:26
+ * @Last Modified time: 2024-04-28 21:23:25
  */
 
 
@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 import React from 'react'
 
- const RecipeMainContainer = (props) => {
+const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
             <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>

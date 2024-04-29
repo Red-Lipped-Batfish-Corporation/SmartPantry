@@ -82,6 +82,8 @@
 import React, { useState } from 'react';
 import { Dropdown, Button, Card } from 'react-bootstrap';
 import { AiOutlineClose } from "react-icons/ai";
+import RecipeCard from './RecipeCard';
+import RecipesData from '../statics/data';
 
 function DropdownExample() {
     const [selectedItems, setSelectedItems] = useState([]);
@@ -128,7 +130,7 @@ function DropdownExample() {
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                     <Dropdown.Item eventKey="Tomato">Tomato</Dropdown.Item>
-                    <Dropdown.Item eventKey="Eggs">Eggs</Dropdown.Item>
+                    <Dropdown.Item eventKey="egg">Eggs</Dropdown.Item>
                     <Dropdown.Item eventKey="Chicken">Chicken</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
