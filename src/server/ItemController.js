@@ -55,6 +55,27 @@ const itemController = {
       });
     }
   },
+  async getItemsExpiringSoon (req, res, next)  {
+    const now = new Date();
+    const daysInAdvance = 3;
+    const expiringSoonDate = new Date(now.getTime() + (daysInAdvance * 24 * 60 * 60 * 1000));
+    
+    try {
+      const docs = await item.find({
+        expirationDate: {
+          $lte: expiringSoonDate
+        }
+      });
+      res.locals.doc = docs;
+      return next();
+    } catch (err) {
+      return next({
+        log: 'Error in itemController.getItemsExpiringSoon: ' + err,
+        status: 500,
+        message: { error: 'An error occurred while fetching items expiring soon.' }
+      });
+    }
+  },
 };
 
 module.exports = itemController;
