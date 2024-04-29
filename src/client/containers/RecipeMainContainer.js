@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 08:09:50
+ * @Last Modified time: 2024-04-28 17:57:26
  */
 
 
@@ -11,7 +11,7 @@ import RecipeCard from '../components/RecipeCard';
 
 import React from 'react'
 
-export const RecipeMainContainer = (props) => {
+ const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
             <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>
@@ -25,3 +25,4 @@ export const RecipeMainContainer = (props) => {
     )
 }
 
+export default RecipeMainContainer

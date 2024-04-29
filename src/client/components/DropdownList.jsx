@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 15:38:27 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 07:56:42
+ * @Last Modified time: 2024-04-28 18:43:44
  */
 
 import React, { useState } from 'react';
@@ -10,7 +10,7 @@ import { Dropdown, Button, Card } from 'react-bootstrap';
 import { AiOutlineClose } from "react-icons/ai";
 
 
-function DropdownExample() {
+function DropdownList() {
     // track the state of the selection
     const [selectedItems, setSelectedItems] = useState([]);
 
@@ -75,4 +75,4 @@ function DropdownExample() {
     );
 }
 
-export default DropdownExample;
+export default DropdownList;
