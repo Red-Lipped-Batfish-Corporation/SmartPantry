@@ -16,7 +16,7 @@ function PantryPage() {
                     <button type="button">Take me to Welcome Page</button>
                 </Link>
                 <Link to="/recipes">
-                    <button type="button">Take me to Recipes Page</button>
+                    <button type="button">Take me to Pantry Page</button>
                 </Link>
             </div>
         </div>
