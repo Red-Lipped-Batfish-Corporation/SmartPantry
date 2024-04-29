@@ -13,6 +13,7 @@ import { AiOutlineClose } from "react-icons/ai";
 function DropdownExample() {
     // track the state of the selection
     const [selectedItems, setSelectedItems] = useState([]);
+    const [recipes, setRecipes] = useState([]);
 
     // handle select
     const handleSelect = (eventKey) => {
@@ -35,7 +36,7 @@ function DropdownExample() {
     const handleRequest = (arr) => {
 
     }
-
+   
     return (
         <div>
             {/* Dropdown list */}
