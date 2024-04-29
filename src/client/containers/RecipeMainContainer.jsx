@@ -15,6 +15,11 @@ import React from 'react'
 const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
+            <div style={{ backgroundColor: '#FFCB77' }}>🥗</div>
+            <div style={{ backgroundColor: '#17C3B2' }}>🥪</div>
+            <div style={{ backgroundColor: '#227C9D' }}>🥧</div>
+            <div style={{ backgroundColor: '#FEF9EF' }}>🍳</div>
+            <div style={{ backgroundColor: '#FE6D73' }}>🍛</div>
             <DropdownList {...props} />
             <div className="navigation-buttons">
                 <Link to="/">
