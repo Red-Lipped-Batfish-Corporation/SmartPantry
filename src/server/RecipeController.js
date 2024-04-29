@@ -52,7 +52,7 @@ const recipeController = {
 
             const lowerCaseIngredients = ingredients.toLowerCase();
 
-            const apiUrl = `https://api.spoonacular.com/recipes/random?number=1&apiKey=96de5f8d876b4599a17a24264d8ba2f9&tags=${lowerCaseIngredients}`;
+            const apiUrl = `https://api.spoonacular.com/recipes/random?number=1&apiKey=ec42407bffbe4527b7b7bc236c38728a&tags=${lowerCaseIngredients}`;
 
             const response = await fetch(apiUrl);
             if (!response.ok) {
