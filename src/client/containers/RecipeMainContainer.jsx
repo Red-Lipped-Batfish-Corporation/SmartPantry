@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 15:54:22
+ * @Last Modified time: 2024-04-29 15:57:16
  */
 
 
@@ -21,7 +21,7 @@ const RecipeMainContainer = (props) => {
                     <button type="button">Take me to the Welcome Page</button>
                 </Link>
                 <Link to="/pantry">
-                    <button type="button">Take me to the Recipes Page</button>
+                    <button type="button">Take me to the Pantry Page</button>
                 </Link>
             </div>
         </div>
