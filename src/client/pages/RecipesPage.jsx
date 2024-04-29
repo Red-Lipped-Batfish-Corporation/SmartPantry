@@ -17,7 +17,7 @@ function RecipesPage() {
           <button type="button">Take me to the Welcome Page</button>
         </Link>
         <Link to="/pantry">
-          <button type="button">Take me to the Recipes Page</button>
+          <button type="button">Take me to the Pantry Page</button>
         </Link>
       </div>
     </div> 

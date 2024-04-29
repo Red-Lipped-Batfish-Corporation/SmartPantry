@@ -12,7 +12,7 @@ const WelcomePage = () => {
     <div>
       <h1>Welcome to the grocery tracker</h1>
       {/* <button onClick={showAlert}>Show Alert</button> */}
-      <Alert />
+      <Alert/>
       <Recommd/>
       <div className="navigation-buttons">
         <Link to="/pantry">

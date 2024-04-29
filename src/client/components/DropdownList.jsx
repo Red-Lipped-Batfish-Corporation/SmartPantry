@@ -126,7 +126,7 @@ function DropdownExample() {
     return (
         <div>
             <Dropdown onSelect={handleSelect}>
-                <Dropdown.Toggle variant="primary" id="dropdown-basic" style={{ backgroundColor: '#17C3B2' }}>
+                <Dropdown.Toggle variant="primary" id="dropdown-basic" style={{ backgroundColor: '#17C3B2'}}>
                     Choose the ingredient from your grocery list:
                 </Dropdown.Toggle>
                 <Dropdown.Menu>

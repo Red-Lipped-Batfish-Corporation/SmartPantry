@@ -56,11 +56,11 @@ function DropdownExample() {
                 <h4>Your chose: </h4>
                 {/* Iterate the selected items and show them in the card */}
                 {selectedItems.map(item => (
-                    <Card key={item} style={{ backgroundColor: '#FEF9EF', width: '200px', margin: '5px', display: 'flex', justifyContent: 'space-between' }}>
+                    <Card key={item} style={{ backgroundColor: '#FEF9EF', width: '150px', margin: '5px', display: 'flex', justifyContent: 'space-between'}}>
                         <Card.Body>
                             <Card.Text>{item}</Card.Text>
                             {/* <Button variant="danger" onClick={() => handleCancel(item)}>取消选择</Button> */}
-                            <AiOutlineClose style={{ color: 'red', cursor: 'pointer', marginRight: '10px' }} onClick={() => handleCancel(item)} />
+                            <AiOutlineClose style={{ color: 'red', cursor: 'pointer'}} onClick={() => handleCancel(item)} />
                         </Card.Body>
                     </Card>
                 ))}

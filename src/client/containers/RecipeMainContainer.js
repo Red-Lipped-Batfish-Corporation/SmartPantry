@@ -15,11 +15,11 @@ import React from 'react'
 const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
-            <div style={{ backgroundColor: '#FFCB77' }}>Yellow</div>
-            <div style={{ backgroundColor: '#17C3B2' }}>green</div>
-            <div style={{ backgroundColor: '#227C9D' }}>blue</div>
-            <div style={{ backgroundColor: '#FEF9EF' }}>khaki</div>
-            <div style={{ backgroundColor: '#FE6D73' }}>red</div>
+            <div style={{ backgroundColor: '#FFCB77' }}>🥗</div>
+            <div style={{ backgroundColor: '#17C3B2' }}>🥪</div>
+            <div style={{ backgroundColor: '#227C9D' }}>🥧</div>
+            <div style={{ backgroundColor: '#FEF9EF' }}>🍳</div>
+            <div style={{ backgroundColor: '#FE6D73' }}>🍛</div>
             <DropdownList {...props} />
             <RecipeCard {...props} />
             <div className="navigation-buttons">
@@ -27,7 +27,7 @@ const RecipeMainContainer = (props) => {
           <button type="button">Take me to the Welcome Page</button>
         </Link>
         <Link to="/pantry">
-          <button type="button">Take me to the Recipes Page</button>
+          <button type="button">Take me to the Pantry Page</button>
         </Link>
       </div>
         </div>
