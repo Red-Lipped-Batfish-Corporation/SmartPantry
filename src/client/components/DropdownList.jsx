@@ -2,7 +2,7 @@
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-28 07:56:42
+ * @Last Modified time: 2024-04-29 10:15:02
  */
 
 // import React, { useState } from 'react';
@@ -87,14 +87,14 @@ import RecipesData from '../statics/data';
 
 function DropdownExample() {
     const [selectedItems, setSelectedItems] = useState([]);
-    const [recipes, setRecipes] = useState([]); 
+    const [recipes, setRecipes] = useState([]);
 
     const handleSelect = (eventKey) => {
         const index = selectedItems.indexOf(eventKey);
         if (index === -1) {
-            setSelectedItems([...selectedItems, eventKey]); 
+            setSelectedItems([...selectedItems, eventKey]);
         } else {
-            setSelectedItems(selectedItems.filter(item => item !== eventKey)); 
+            setSelectedItems(selectedItems.filter(item => item !== eventKey));
         }
     };
 
@@ -116,8 +116,14 @@ function DropdownExample() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('Data received:', data); 
-            setRecipes(data.recipes || []);
+            // console.log('Data received:', data);
+            // console.log('Data received img:', data.image);
+            setRecipes(data || []);
+
+            //         // Summary of Recipe: .summary
+            //         // Instructions: .instructions
+            //         // Recipe Card: .analyzedInstructions
+
         } catch (error) {
             console.error('Failed to fetch recipes:', error);
         }
@@ -149,9 +155,12 @@ function DropdownExample() {
                 {selectedItems.length === 0 && <p>Please choose your item above.</p>}
                 <Button onClick={handleRequest} variant="primary" style={{ backgroundColor: '#FE6D73', width: '200px', margin: '5px' }}>Let's find the recipes!!!</Button>
             </div>
-            
             <div>
-                {recipes.map(recipe => (
+                <RecipeCard recipes={recipes} />
+            </div>
+
+            <div>
+                {/* {recipes.map(recipe => (
                     <Card key={recipe.id}>
                         <Card.Body>
                             <Card.Title>{recipe.title}</Card.Title>
@@ -159,7 +168,7 @@ function DropdownExample() {
                             <Button href={recipe.url}>View Recipe</Button>
                         </Card.Body>
                     </Card>
-                ))}
+                ))} */}
             </div>
         </div>
     );
