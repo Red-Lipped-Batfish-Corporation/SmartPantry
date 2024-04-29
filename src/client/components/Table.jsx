@@ -3,21 +3,21 @@ const Table = () => {
     const [foodItem, setFoodItem] = useState([]);
     const [expirationDates, setExpirationDates] = useState([]);
     useEffect(() => {
-        fetch("localhost:3000/api/items", {
+        fetch("/api/items", {
             method: 'GET'
         }).then(response => response.json())
             .then((food) => {
                 console.log('here is food item', foodItem)
                 setFoodItem(food);
-                const expDates = food.map(item => item.expirationDate);
-                setExpirationDates(expDates);
+                // const expDates = food.map(item => item.expirationDate);
+                // setExpirationDates(expDates);
         }).catch(err => console.log(err))
     }, [])
     return (
         <div> 
             <table>
                 <tr>
-                    <th>Name of product</th>
+                    <th> Name of product</th>
                     <th> Expiration date</th>
                     <th> Date of Purchase </th>
                 </tr>
