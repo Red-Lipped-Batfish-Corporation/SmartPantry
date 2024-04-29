@@ -14,19 +14,19 @@ import Button from 'react-bootstrap/Button';
 const RecipeCard = (props) => {
     const recipe = props.recipes;
 
-    const imgUrl = recipe.image;
-    console.log(imgUrl)
-    const count = recipe.missedIngredientCount;
-    const title = recipe.title;
+    // const imgUrl = recipe.image;
+    // console.log(imgUrl)
+    // const count = recipe.missedIngredientCount;
+    // const title = recipe.title;
 
 
     return (
         <div>
             <Card style={{ width: '18rem', backgroundColor: '#FEF9EF' }}>
 
-                <Card.Img variant="top" src={imgUrl} />
+                {/* <Card.Img variant="top" src={imgUrl} /> */}
                 <Card.Body>
-                    <Card.Title>{title}</Card.Title>
+                    {/* <Card.Title>{title}</Card.Title> */}
                     <Card.Text>
                         Reminder health app that keeps track of expiration dates and has a recipe book. Healthy food categorization.
                     </Card.Text>
@@ -39,7 +39,7 @@ const RecipeCard = (props) => {
 
                 </ListGroup>
                 <Card.Body>
-                    <Card.Link href="#">{count}</Card.Link>
+                    {/* <Card.Link href="#">{count}</Card.Link> */}
                 </Card.Body>
             </Card>
         </div>
