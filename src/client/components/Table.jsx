@@ -9,7 +9,6 @@ const Table = () => {
             .then((food) => {
                 console.log('here is food item', foodItem)
                 setFoodItem(food)
-                // should extract all the expiration dates into array of dates
                 const expDates = food.map(item => item.Exp);
                 setExpirationDates(expDates);
         }).catch(err => console.log(err))
@@ -40,3 +39,10 @@ const Table = () => {
 }
 
 export default Table;
+
+/*
+ * @Author: Nikola Andelkovic nandelkovic53@gmail.com
+ * @Date: 2024-04-27 7:40 pm
+ * @Last Modified by:nandelkovic53@gmail.com
+ * @Last Modified by Nikola Andelkovic time:  2024-04-27 7:40 pm
+ */

@@ -87,3 +87,11 @@ function Alert() {
 }
 
 export default Alert;
+
+/*
+ * @Author: Christie Laferriere & Nikola  nandelkovic53@gmail.com
+ * @Date: 2024-04-28 5:40 pm
+ * @Last Modified by: christie.laferriere@gmail.com
+ * @Last Modified by Christie Laferriere time: 2024-04-29 1:30 AM 
+ * this version contains allows the front end to make get requests to the server which makes requests to the to Mongo  DB
+ */

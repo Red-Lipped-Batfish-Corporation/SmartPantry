@@ -25,3 +25,10 @@ function RecipesPage() {
 }
 
 export default RecipesPage
+
+/*
+ * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
+ * @Date: 2024-04-28 5:40 pm
+ * @Last Modified by: christie.laferriere@gmail.com 
+ * @Last Modified time: 2024-04-29 1:30 AM 
+ */
