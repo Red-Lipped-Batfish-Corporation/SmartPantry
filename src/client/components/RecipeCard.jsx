@@ -1,8 +1,8 @@
 /*
  * @Author: Peter Gao 
  * @Date: 2024-04-27 08:47:03 
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 10:56:33
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 14:13:52
  */
 import React from 'react';
 import Card from 'react-bootstrap/Card';
@@ -12,10 +12,10 @@ import { useEffect } from 'react';
 
 
 
-const RecipeCard = (recipes) => {
+const RecipeCard = (props) => {
     let imgUrl;
     // console.log('Recipes type are: ', typeof (recipes))
-    console.log('Recipes are: ', recipes)
+    console.log('Recipes are: ', props)
     // console.log('recipes.recipes type  are: ', typeof (recipes.recipes))
     // console.log('The raw data is: ', recipes.image)
 

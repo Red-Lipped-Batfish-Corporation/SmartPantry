@@ -50,10 +50,10 @@ import WelcomePage from './pages/WelcomePage';
 import './red-lip.css';
 import RecipeMainContainer from './containers/RecipeMainContainer';
 
-  const App = () => {
-      return (
+const App = () => {
+    return (
         <div>
-           {/* <Router>
+            {/* <Router>
               <Routes>
               <Route path="/" element={<WelcomePage />} />
               <Route path='/pantry' 
@@ -65,15 +65,15 @@ import RecipeMainContainer from './containers/RecipeMainContainer';
               <Button to="pantry"/>
               <Button2 to="recipes"/>
             </Router> */}
-                <Router>
+            <Router>
                 <Routes>
-                <Route path="/" element={<WelcomePage />} />
-                <Route path="/pantry" element={<PantryPage />} />
-                {/* <Route path="/recipes" element={<RecipesPage />} /> */}
-                <Route path="/recipes" element={<RecipeMainContainer />} />
-              </Routes>
-              </Router>
-        </div>      
+                    <Route path="/" element={<WelcomePage />} />
+                    <Route path="/pantry" element={<PantryPage />} />
+                    {/* <Route path="/recipes" element={<RecipesPage />} /> */}
+                    <Route path="/recipes" element={<RecipeMainContainer />} />
+                </Routes>
+            </Router>
+        </div>
 
     )
 }
@@ -84,6 +84,6 @@ export default App;
 /*
  * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
  * @Date: 2024-04-28 5:40 pm
- * @Last Modified by: christie.laferriere@gmail.com 
- * @Last Modified time: 2024-04-29 1:30 AM 
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 12:59:04
  */

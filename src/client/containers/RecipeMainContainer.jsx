@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 08:16:11
+ * @Last Modified time: 2024-04-29 12:59:19
  */
 
 
@@ -16,7 +16,6 @@ const RecipeMainContainer = (props) => {
     return (
         <div style={{ margin: '40px' }}>
             <DropdownList {...props} />
-            <RecipeCard {...props} />
             <div className="navigation-buttons">
                 <Link to="/">
                     <button type="button">Take me to the Welcome Page</button>

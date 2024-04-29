@@ -10,7 +10,6 @@ function RecipesPage() {
 
         <div className="recipes">
             <h1>This is the Recipes page</h1>
-            {/* <RecipeCard /> */}
             <Recommd />
             <div className="navigation-buttons">
                 <Link to="/">
@@ -30,5 +29,5 @@ export default RecipesPage
  * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
  * @Date: 2024-04-28 5:40 pm
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 09:47:31
+ * @Last Modified time: 2024-04-29 12:13:13
  */
