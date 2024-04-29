@@ -116,7 +116,8 @@ function DropdownExample() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            setRecipes(data.recipes || []); 
+            console.log('Data received:', data); 
+            setRecipes(data.recipes || []);
         } catch (error) {
             console.error('Failed to fetch recipes:', error);
         }
