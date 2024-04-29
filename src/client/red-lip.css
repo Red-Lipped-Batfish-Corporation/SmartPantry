@@ -70,6 +70,12 @@ h1 {
     margin-top:2rem ;
 }
 
+.table {
+    background: #012B39;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+  }
 
 /*
  * @Author: Peter Gao  & Christie laferriere
