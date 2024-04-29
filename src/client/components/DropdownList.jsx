@@ -1,30 +1,19 @@
 /*
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
- * @Last Modified by: mikey.zhaopeng
+ * @Last Modified by: Peter Gao
  * @Last Modified time: 2024-04-29 14:55:25
  */
 
 import React, { useState } from 'react';
 import { Dropdown, Button, Card, Container, Row, Col } from 'react-bootstrap';
 import { AiOutlineClose } from "react-icons/ai";
-// import RecipeCard from './RecipeCard';
-import RecipesData from '../statics/data';
-// import Card from 'react-bootstrap/Card';
 import { ListGroup } from 'react-bootstrap';
 
 function DropdownList() {
     const [selectedItems, setSelectedItems] = useState([]);
     const [recipes, setRecipes] = useState({});
 
-    // const steps = [
-    //     'Step 1: In a bowl, add chuck, sirloin, bread crumbs, steak sauce, eggs, salt, and pepper, and mix gently with fork.',
-    //     'Step 2: Form 4 patties out of this mixture.',
-    //     'Step 3: Cook the hamburgers patties on each side, then cover with aluminium foil.',
-    //     'Step 4: Cut the sides of the bun, then grill in a stove-top grill until toasted.',
-    //     'Step 5: Place patties and a slice of blue cheese in each bun.',
-    //     'Step 6: Serve hot.'
-    // ]
 
     const handleSelect = (eventKey) => {
         const index = selectedItems.indexOf(eventKey);
@@ -73,6 +62,9 @@ function DropdownList() {
                         <Dropdown.Item eventKey="Tomato">Tomato</Dropdown.Item>
                         <Dropdown.Item eventKey="egg">Eggs</Dropdown.Item>
                         <Dropdown.Item eventKey="Chicken">Chicken</Dropdown.Item>
+                        <Dropdown.Item eventKey="Pork">Pork</Dropdown.Item>
+                        <Dropdown.Item eventKey="fish">Fish</Dropdown.Item>
+                        <Dropdown.Item eventKey="Brocoli">Chicken</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
 
@@ -96,13 +88,11 @@ function DropdownList() {
                         <Card.Img variant="top" src={recipes.image} />
                         <Card.Body style={{ backgroundColor: '#FEF9EF', textAlign: 'left !important' }}>
                             <Card.Title>{recipes.title}</Card.Title>
-                            {/* <Card.Text >{recipes.steps}</Card.Text> */}
                             <ListGroup className="list-group-flush">
-                            <ListGroup.Item style={{ backgroundColor: '#FEF9EF', textAlign: 'left !important' }}>{recipes.steps}</ListGroup.Item>
-                        </ListGroup>
+                                <ListGroup.Item style={{ backgroundColor: '#FEF9EF', textAlign: 'left !important' }}>{recipes.steps}</ListGroup.Item>
+                            </ListGroup>
 
-{/* Should use the iteration method */}
-
+                            {/* Should use the iteration method, it is not good enough because the raw data has the repetitive fields. */}
                             {/* <ListGroup className="list-group-flush">
                                 {Object.keys(recipes).map(key => (
                                     <ListGroup.Item key={key} className="text-left" style={{ backgroundColor: '#FEF9EF' }}>
@@ -114,10 +104,7 @@ function DropdownList() {
                         </Card.Body>
                     </Card>
                 </div>
-
-
                 <div>
-
                 </div>
             </div>
         </Container>

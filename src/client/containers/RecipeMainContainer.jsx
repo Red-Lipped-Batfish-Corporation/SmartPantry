@@ -2,7 +2,7 @@
  * @Author: Peter Gao 
  * @Date: 2024-04-27 16:03:29 
  * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 12:59:19
+ * @Last Modified time: 2024-04-29 14:16:04
  */
 
 
@@ -14,7 +14,7 @@ import React from 'react'
 
 const RecipeMainContainer = (props) => {
     return (
-        <div style={{ margin: '40px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
             <DropdownList {...props} />
             <div className="navigation-buttons">
                 <Link to="/">
