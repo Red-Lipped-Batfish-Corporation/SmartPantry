@@ -3,7 +3,7 @@
  * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
  * @Date: 2024-04-27 5:40 pm
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-30 02:41:44
+ * @Last Modified time: 2024-04-30 10:36:45
  */
 
 const recipeController = {
@@ -16,7 +16,7 @@ const recipeController = {
 
             const lowerCaseIngredients = ingredients.toLowerCase();
             // insert API key into URL
-            const apiUrl = `https://api.spoonacular.com/recipes/random?number=1&apiKey=<INSERT-API-KEY-HERE>&tags=${lowerCaseIngredients}`;
+            const apiUrl = `https://api.spoonacular.com/recipes/random?number=1&apiKey=ec42407bffbe4527b7b7bc236c38728a&tags=${lowerCaseIngredients}`;
 
             const response = await fetch(apiUrl);
             if (!response.ok) {
