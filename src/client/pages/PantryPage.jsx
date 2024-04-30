@@ -2,7 +2,7 @@
  * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
  * @Date: 2024-04-28 5:40 pm
  * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-29 19:25:27
+ * @Last Modified time: 2024-04-30 02:27:06
  */
 
 import Input from "../components/Input";
@@ -22,7 +22,7 @@ function PantryPage() {
                     <button type="button">Take me to Welcome Page</button>
                 </Link>
                 <Link to="/recipes">
-                    <button type="button">Take me to Pantry Page</button>
+                    <button type="button">Take me to Recipes Page</button>
                 </Link>
             </div>
             <div>   

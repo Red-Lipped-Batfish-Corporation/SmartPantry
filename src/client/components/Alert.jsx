@@ -31,7 +31,8 @@ function Alert() {
     return (
         <div style={{ textAlign: 'center' }}>
             {!hide && expiringItemCount > 0 && (
-                <h3>You have {expiringItemCount} items expiring soon. Click take me to Pantry to see which items!</h3>
+                <h3>You have {expiringItemCount} items expiring soon. 
+                Click Take me to Pantry to see which items!</h3>
             )}
             <button onClick={toggleAlert}>{hide ? 'Show' : 'Hide'} Alert</button>
         </div>  

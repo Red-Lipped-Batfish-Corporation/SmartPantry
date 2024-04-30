@@ -15,7 +15,7 @@ const WelcomePage = () => {
 
     return (
         <div>
-            <h1>Welcome to the grocery tracker</h1>
+            <h1>Welcome to the Grocery Tracker</h1>
             <Alert />
             <Recommd />
             <div className="navigation-buttons">

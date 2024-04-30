@@ -23,9 +23,9 @@ const Table = () => {
         <div> 
             <table>
                 <tr>
-                    <th> Name of product</th>
-                    <th> Expiration date</th>
-                    <th> Date of Purchase </th>
+                    <th> Name of Product</th>
+                    <th> Expiration Date</th>
+                    <th> Date of Purchase</th>
                 </tr>
                 <tbody> 
                     {
