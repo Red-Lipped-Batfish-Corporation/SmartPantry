@@ -1,8 +1,8 @@
 /*
  * @Author: Jing
  * @Date: 2024-04-28 2:00 pm
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 17:19:38
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 21:27:00
  */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -24,9 +24,9 @@ function Recommd() {
 
         const check = localStorage.getItem('recommd');
         if (check) {
-            setRecommd(JSON.parse(check)); //get the data from localstorage and parsing it back from string to the array 
-        } else {
-            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&number=10`);
+            setRecommd(JSON.parse(check)); 
+        } else { // sign up and insert API key here
+            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=<Sign up and insert API key here>&number=10`);
             const data = await api.json();
             localStorage.setItem('recommd', JSON.stringify(data.recipes));
             console.log(data);
