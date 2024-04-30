@@ -23,6 +23,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/, 
+        use: [
+          'style-loader', 
+          'css-loader', 
+          'sass-loader' 
+        ]
       }
     ]
   },
@@ -32,7 +40,7 @@ module.exports = {
     })
   ],
   devServer: {
-    historyApiFallback: true,
+    historyApiFallback: false,
     proxy: {
       '/api': 'http://localhost:3000'
     },
@@ -47,3 +55,9 @@ module.exports = {
     extensions: ['.js', '.jsx']
   }
 };
+
+//  @Author: Abel xabelpenguin@gmail.com donated this code
+// @Date: 2024-04-27 5:40 pm
+// @Last Modified by:Abel xabelpenguin@gmail.com
+// @Last Modified time: 2024-04-27 10:30 PM 
+
