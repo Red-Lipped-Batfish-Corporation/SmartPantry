@@ -26,7 +26,7 @@ function Recommd() {
         if (check) {
             setRecommd(JSON.parse(check)); //get the data from localstorage and parsing it back from string to the array 
         } else {
-            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&number=10`);
+            const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=<INSERT-API-KEY-HERE>&number=10`);
             const data = await api.json();
             localStorage.setItem('recommd', JSON.stringify(data.recipes));
             console.log(data);

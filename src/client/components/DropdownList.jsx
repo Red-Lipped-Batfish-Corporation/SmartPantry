@@ -1,8 +1,8 @@
 /*
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 17:15:58
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-30 02:10:56
  */
 
 import React, { useState } from 'react';
@@ -57,11 +57,11 @@ function DropdownList() {
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
                         <Dropdown.Item eventKey="Tomato">Tomato</Dropdown.Item>
-                        <Dropdown.Item eventKey="egg">Eggs</Dropdown.Item>
+                        <Dropdown.Item eventKey="Egg">Eggs</Dropdown.Item>
                         <Dropdown.Item eventKey="Chicken">Chicken</Dropdown.Item>
                         <Dropdown.Item eventKey="Pork">Pork</Dropdown.Item>
-                        <Dropdown.Item eventKey="fish">Fish</Dropdown.Item>
-                        <Dropdown.Item eventKey="Brocoli">Chicken</Dropdown.Item>
+                        <Dropdown.Item eventKey="Fish">Fish</Dropdown.Item>
+                        <Dropdown.Item eventKey="Broccoli">Chicken</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
 
