@@ -1,5 +1,11 @@
+/*
+ * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
+ * @Date: 2024-04-28 5:40 pm
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 17:21:44
+ */
+
 import React from "react";
-import RecipeCard from "../components/RecipeCard";
 import { Link } from 'react-router-dom';
 import Recommd from "../components/Recommd";
 import '../red-lip.css';
@@ -23,11 +29,5 @@ function RecipesPage() {
     )
 }
 
-export default RecipesPage
+export default RecipesPage;
 
-/*
- * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
- * @Date: 2024-04-28 5:40 pm
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 12:13:13
- */

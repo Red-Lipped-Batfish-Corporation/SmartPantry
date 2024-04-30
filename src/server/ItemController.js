@@ -1,3 +1,9 @@
+/*
+ * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
+ * @Date: 2024-04-27 5:40 pm
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 19:14:23
+ */
 const item = require('./ItemModel');
 
 const itemController = {
@@ -6,6 +12,7 @@ const itemController = {
     try {
       const docs = await item.find();
       res.locals.doc = docs;
+      console.log(docs);
       if (res.locals.doc === null) return next({
         log: 'Message: Item names not found in DB',
         status: 404,
@@ -81,9 +88,3 @@ const itemController = {
 module.exports = itemController;
 
 
-/*
- * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
- * @Date: 2024-04-27 5:40 pm
- * @Last Modified by:Abel xabelpenguin@gmail.com
- * @Last Modified time: 2024-04-27 10:30 PM 
- */
