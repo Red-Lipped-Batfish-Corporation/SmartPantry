@@ -1,3 +1,10 @@
+/*
+ * @Author: Nikola Andelkovic nandelkovic53@gmail.com
+ * @Date: 2024-04-27 7:40 pm
+ * @Last Modified by:nandelkovic53@gmail.com
+ * @Last Modified by Nikola Andelkovic time:  2024-04-27 7:40 pm
+ */
+
 import { useEffect, useState } from "react";
 import React from 'react';
 const Table = () => {
@@ -10,8 +17,6 @@ const Table = () => {
             .then((food) => {
                 console.log('here is food item', foodItem)
                 setFoodItem(food);
-                // const expDates = food.map(item => item.expirationDate);
-                // setExpirationDates(expDates);
         }).catch(err => console.log(err))
     }, [])
     return (
@@ -41,9 +46,3 @@ const Table = () => {
 
 export default Table;
 
-/*
- * @Author: Nikola Andelkovic nandelkovic53@gmail.com
- * @Date: 2024-04-27 7:40 pm
- * @Last Modified by:nandelkovic53@gmail.com
- * @Last Modified by Nikola Andelkovic time:  2024-04-27 7:40 pm
- */

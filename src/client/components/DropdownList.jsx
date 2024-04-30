@@ -1,8 +1,8 @@
 /*
  * @Author: Peter Gao  & Christie laferriere
  * @Date: 2024-04-27 15:38:27 
- * @Last Modified by: Peter Gao
- * @Last Modified time: 2024-04-29 14:55:25
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 17:15:58
  */
 
 import React, { useState } from 'react';
@@ -42,14 +42,11 @@ function DropdownList() {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            console.log('Data received:', data.steps);
             setRecipes(data);
         } catch (error) {
             console.error('Failed to fetch recipes:', error);
         }
     };
-
-    console.log('recipes.steps is this kind of thing: ', typeof (recipes.steps))
 
     return (
         <Container style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -91,15 +88,6 @@ function DropdownList() {
                             <ListGroup className="list-group-flush">
                                 <ListGroup.Item style={{ backgroundColor: '#FEF9EF', textAlign: 'left !important' }}>{recipes.steps}</ListGroup.Item>
                             </ListGroup>
-
-                            {/* Should use the iteration method, it is not good enough because the raw data has the repetitive fields. */}
-                            {/* <ListGroup className="list-group-flush">
-                                {Object.keys(recipes).map(key => (
-                                    <ListGroup.Item key={key} className="text-left" style={{ backgroundColor: '#FEF9EF' }}>
-                                        {recipes[key]}
-                                    </ListGroup.Item>
-                                ))}
-                            </ListGroup> */}
 
                         </Card.Body>
                     </Card>

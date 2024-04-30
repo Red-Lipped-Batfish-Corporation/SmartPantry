@@ -1,3 +1,9 @@
+/*
+ * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
+ * @Date: 2024-04-27 5:40 pm
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 19:14:23
+ */
 const item = require('./ItemModel');
 
 const itemController = {
@@ -82,9 +88,3 @@ const itemController = {
 module.exports = itemController;
 
 
-/*
- * @Author: Christie Laferriere & Abel xabelpenguin@gmail.com
- * @Date: 2024-04-27 5:40 pm
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-29 19:14:23
- */

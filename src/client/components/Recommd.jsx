@@ -1,3 +1,9 @@
+/*
+ * @Author: Jing
+ * @Date: 2024-04-28 2:00 pm
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 17:19:38
+ */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
@@ -8,17 +14,17 @@ import '@splidejs/react-splide/css';
 
 function Recommd() {
 
-    const[recommd, setRecommd ] = useState([]);
+    const [recommd, setRecommd] = useState([]);
 
     useEffect(() => {
         getRecommd()
-    },[]);
+    }, []);
 
-    const getRecommd = async() => {
+    const getRecommd = async () => {
 
         const check = localStorage.getItem('recommd');
         if (check) {
-            setRecommd (JSON.parse(check)); //get the data from localstorage and parsing it back from string to the array 
+            setRecommd(JSON.parse(check)); //get the data from localstorage and parsing it back from string to the array 
         } else {
             const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=96de5f8d876b4599a17a24264d8ba2f9&number=10`);
             const data = await api.json();
@@ -28,34 +34,34 @@ function Recommd() {
         }
     }
 
-  return (
-    <div>
-        <Wrapper>
-            <h4>Popular Recipes</h4>
-            <Splide 
-            options = {{
-                perPage: 4,
-                arrow: false,
-                Pagination: false,
-                drag: "free",
-                gap: " 4rem",
-            }}>
-                {recommd.map((recipe) => {
-                    return (
-                        <SplideSlide>
-                        <Card>
-                            <p>{recipe.title}</p>
-                            <img src={recipe.image} alt={recipe.title} />
-                            <Gradient />
-                        </Card>
-                        </SplideSlide>
-                    );
-                 })} 
-            </Splide>
-                    
-        </Wrapper>   
-    </div>
-  );
+    return (
+        <div>
+            <Wrapper>
+                <h4>Popular Recipes</h4>
+                <Splide
+                    options={{
+                        perPage: 4,
+                        arrow: false,
+                        Pagination: false,
+                        drag: "free",
+                        gap: " 4rem",
+                    }}>
+                    {recommd.map((recipe) => {
+                        return (
+                            <SplideSlide>
+                                <Card>
+                                    <p>{recipe.title}</p>
+                                    <img src={recipe.image} alt={recipe.title} />
+                                    <Gradient />
+                                </Card>
+                            </SplideSlide>
+                        );
+                    })}
+                </Splide>
+
+            </Wrapper>
+        </div>
+    );
 }
 
 
@@ -105,9 +111,3 @@ const Gradient = styled.div`
 
 export default Recommd;
 
-/*
- * @Author: Jing
- * @Date: 2024-04-28 2:00 pm
- * @Last Modified by: xiajing1103@gmail.com
- * @Last Modified time: 2024-04-29 2: 00 PM
- */

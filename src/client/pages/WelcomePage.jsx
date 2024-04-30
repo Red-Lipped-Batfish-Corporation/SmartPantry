@@ -1,3 +1,10 @@
+/*
+ * @Author: Christie Laferriere
+ * @Date: 2024-04-28 5:40 pm
+ * @Last Modified by: peter_gao@outlook.com
+ * @Last Modified time: 2024-04-29 17:21:58
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Recommd from '../components/Recommd';
@@ -5,13 +12,10 @@ import Alert from '../components/Alert';
 import '../red-lip.css';
 
 const WelcomePage = () => {
-    //   // Function to handle alert, not fully implemented here
-    //   const showAlert = () => alert('Your items expire on Tuesday!');
 
     return (
         <div>
             <h1>Welcome to the grocery tracker</h1>
-            {/* <button onClick={showAlert}>Show Alert</button> */}
             <Alert />
             <Recommd />
             <div className="navigation-buttons">
@@ -28,9 +32,3 @@ const WelcomePage = () => {
 
 export default WelcomePage;
 
-/*
- * @Author: Christie Laferriere
- * @Date: 2024-04-28 5:40 pm
- * @Last Modified by: peter_gao@outlook.com
- * @Last Modified time: 2024-04-29 08:41:04
- */

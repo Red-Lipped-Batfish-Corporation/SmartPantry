@@ -1,3 +1,10 @@
+/*
+ * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
+ * @Date: 2024-04-28 5:40 pm
+ * @Last Modified by: mikey.zhaopeng
+ * @Last Modified time: 2024-04-29 19:25:27
+ */
+
 import Input from "../components/Input";
 import React from 'react';
 import Table from "../components/Table"
@@ -9,8 +16,6 @@ function PantryPage() {
 
     <div className="pantry">
       <h1>Hello, Your Pantry List is here</h1>
-
-            {/* Navigation buttons */}
             <Input />
             <div className="navigation-buttons">
                 <Link to="/">
@@ -30,9 +35,3 @@ function PantryPage() {
 
 export default PantryPage;
 
-/*
- * @Author: Christie Laferriere & Jing xiajing1103@gmail.com
- * @Date: 2024-04-28 5:40 pm
- * @Last Modified by: mikey.zhaopeng
- * @Last Modified time: 2024-04-29 19:25:27
- */
