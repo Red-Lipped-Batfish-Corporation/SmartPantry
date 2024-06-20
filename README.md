@@ -1,4 +1,4 @@
-# Welcome to Red-Lipped Grocery
+# Welcome to SmartPantry
 
 ### What is the problem you’re solving?
 - People keep forgetting when their groceries expire 
